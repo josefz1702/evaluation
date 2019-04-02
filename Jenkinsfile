@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        pollSCM('')
+        githubWebhook()
     }
     tools { 
         maven 'Maven3.6' 
