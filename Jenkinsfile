@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh "mvn test"
-                junit 'build/reports/**/*.xml'
+                junit '**/target/surefire-reports/*.xml'
             }
         }
         stage('Deploy') {
