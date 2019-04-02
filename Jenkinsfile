@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        githubWebhook()
+        GitHubPushTrigger()
     }
     tools { 
         maven 'Maven3.6' 
