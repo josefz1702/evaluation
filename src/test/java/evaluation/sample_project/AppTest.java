@@ -30,7 +30,7 @@ public class AppTest {
     }
     
     @Test
-    public void givenUserDoesNotExists_whenUserInfoIsRetrieved_then404IsReceived()
+    public void givenUserExists_whenUserInfoIsRetrieved_then200IsReceived()
       throws ClientProtocolException, IOException {
       
        // Given
