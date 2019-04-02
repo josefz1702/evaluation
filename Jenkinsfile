@@ -35,7 +35,7 @@ pipeline {
                     sh 'scp $WORKSPACE/target/coding-0.0.1-SNAPSHOT.jar ubuntu@ec2-18-191-101-2.us-east-2.compute.amazonaws.com:/home/ubuntu/'
                     sh 'scp $WORKSPACE/Dockerfile ubuntu@ec2-18-191-101-2.us-east-2.compute.amazonaws.com:/home/ubuntu/'
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@ec2-18-191-101-2.us-east-2.compute.amazonaws.com "docker build -f Dockerfile -t docker-spring-boot ."'
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@ec2-18-191-101-2.us-east-2.compute.amazonaws.com "docker run -p 8080:8080 docker-spring-boot"'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@ec2-18-191-101-2.us-east-2.compute.amazonaws.com "docker run docker-spring-boot"'
                 }
             }
         }
