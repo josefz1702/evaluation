@@ -24,6 +24,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh "mvn test"
+                junit 'build/reports/**/*.xml'
             }
         }
         stage('Deploy') {
